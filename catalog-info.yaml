@@ -1,0 +1,25 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: test-tssc-17-az-qua 
+  description: Secure Supply Chain Example for Quarkus Java example with advanced continuous integration pipeline covering building, CVE scanning, security scanning, signatures,  attestations, SLSA provenance and SBOM along with Gitops-based continuous deployment   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:
+    # ArgoCD apps from this template used tssc-gitops as the grouping
+    argocd/app-selector: tssc/gitops=test-tssc-17-az-qua
+    backstage.io/kubernetes-id: test-tssc-17-az-qua 
+    backstage.io/techdocs-ref: dir:.
+    dev.azure.com/project-repo: prietyc123-qe-org/test-tssc-17-az-qua
+    dev.azure.com/project: shared-public
+    dev.azure.com/build-definition: prietyc123-qe-org.test-tssc-17-az-qua
+    quay.io/repository-slug: tssc/tssc-test
+  tags: ["java", "quarkus", "sscs", "sbom", "acs"] 
+spec:
+  type: service
+  owner: user:guest 
+  lifecycle: experimental
+ 
